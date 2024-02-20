@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - pip install -r requirements.txt
+      
+  build:
+    commands:
+      - echo Building the application...
+      - docker-compose build
+      
+  post_build:
+    commands:
+      - echo Pushing Docker image to Docker Hub...
+      - docker tag my-python-image rajdeep1311/demo:latest
+      - docker login -u rajdeep1311 -p rajdeeprj1311
+      - docker push rajdeep1311/demo:latest
+artifacts:
+  files:
+    - appspec.yml
