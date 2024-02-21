@@ -19,7 +19,7 @@ phases:
       - docker push rajdeep1311/demo:latest
 artifacts:
   files:
-    - appspec.yml
-    - before_install.sh
-    - after_install.sh
-    - start.sh
+     - appspec.yml
+     - before_install.sh
+     - after_install.sh
+     - start.sh
