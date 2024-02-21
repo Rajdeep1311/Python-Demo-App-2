@@ -20,3 +20,6 @@ phases:
 artifacts:
   files:
     - appspec.yml
+    - before_install.sh
+    - after_install.sh
+    - start.sh
